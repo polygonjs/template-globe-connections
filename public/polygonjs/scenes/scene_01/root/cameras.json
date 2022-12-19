@@ -1,0 +1,37 @@
+{
+	"type": "geo",
+	"nodes": {
+		"polarTransform1": {
+			"type": "polarTransform",
+			"params": {
+				"center": [-0.9500000000000001, 0.35, 0],
+				"longitude": -14.4,
+				"latitude": 14.4,
+				"depth": 1.6
+			},
+			"inputs": ["perspectiveCamera_MAIN"]
+		},
+		"perspectiveCamera_MAIN": {
+			"type": "perspectiveCamera",
+			"params": {
+				"fov": 43.20076
+			}
+		},
+		"perspectiveCamera_DEBUG": {
+			"type": "perspectiveCamera",
+			"params": {
+				"position": [4, 4, 4]
+			}
+		},
+		"merge1": {
+			"type": "merge",
+			"inputs": ["cameraRenderer1", "cameraControls1"],
+			"flags": {
+				"display": true
+			}
+		}
+	},
+	"flags": {
+		"display": true
+	}
+}

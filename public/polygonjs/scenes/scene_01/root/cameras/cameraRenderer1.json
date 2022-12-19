@@ -1,0 +1,16 @@
+{
+	"type": "cameraRenderer",
+	"nodes": {
+		"WebGLRenderer1": {
+			"type": "WebGLRenderer",
+			"params": {
+				"toneMapping": 0,
+				"outputEncoding": 3000
+			}
+		}
+	},
+	"params": {
+		"node": "WebGLRenderer1"
+	},
+	"inputs": ["polarTransform1"]
+}

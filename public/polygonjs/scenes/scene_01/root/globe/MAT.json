@@ -1,0 +1,12 @@
+{
+	"type": "materialsNetwork",
+	"nodes": {
+		"meshStandard1": {
+			"type": "meshStandard",
+			"params": {
+				"useMap": 1,
+				"map": "../../COP/image_EARTH"
+			}
+		}
+	}
+}

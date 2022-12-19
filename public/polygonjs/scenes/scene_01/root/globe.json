@@ -1,0 +1,235 @@
+{
+	"type": "geo",
+	"nodes": {
+		"attribFromTexture1": {
+			"type": "attribFromTexture",
+			"params": {
+				"texture": "../COP/image_EARTH",
+				"attrib": "land"
+			},
+			"inputs": ["icosahedron1"]
+		},
+		"delete1": {
+			"type": "delete",
+			"params": {
+				"byExpression": 1,
+				"expression": "@land==0"
+			},
+			"inputs": ["attribFromTexture1"]
+		},
+		"material2": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/pointsBuilder_DOTS"
+			},
+			"inputs": ["attribId3"]
+		},
+		"icosahedron1": {
+			"type": "icosahedron",
+			"params": {
+				"detail": 80,
+				"pointsOnly": 1
+			}
+		},
+		"sphere2": {
+			"type": "sphere"
+		},
+		"material3": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/meshStandardBuilder_SPHERE"
+			},
+			"inputs": ["transform1"]
+		},
+		"merge1": {
+			"type": "merge",
+			"inputs": ["material2", "material3", "material1", "material4"],
+			"flags": {
+				"display": true
+			}
+		},
+		"transform1": {
+			"type": "transform",
+			"params": {
+				"scale": 0.998
+			},
+			"inputs": ["sphere2"]
+		},
+		"scatter1": {
+			"type": "scatter",
+			"params": {
+				"pointsCount": 32
+			},
+			"inputs": ["sphere2"]
+		},
+		"copy1": {
+			"type": "copy",
+			"params": {
+				"count": "pointsCount('../scatter1')-1"
+			},
+			"inputs": ["attribId1"]
+		},
+		"blend1": {
+			"type": "blend",
+			"params": {
+				"updateNormals": 0
+			},
+			"inputs": ["delete_keep_pt0", "delete_keep_pt1"]
+		},
+		"transform2": {
+			"type": "transform",
+			"params": {
+				"scale": "1+point(0, 'pointsDistance',0)"
+			},
+			"inputs": ["attribNormalize1"]
+		},
+		"merge2": {
+			"type": "merge",
+			"inputs": ["delete_keep_pt0", "transform2", "delete_keep_pt1"]
+		},
+		"circle3Points1": {
+			"type": "circle3Points",
+			"params": {
+				"full": 0
+			},
+			"inputs": ["merge2"]
+		},
+		"material1": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/lineBasicBuilder_ARCS"
+			},
+			"inputs": ["merge3"]
+		},
+		"attribId1": {
+			"type": "attribId",
+			"params": {
+				"id": 0
+			},
+			"inputs": ["circle3Points1"]
+		},
+		"attribId2": {
+			"type": "attribId",
+			"params": {
+				"class": 1,
+				"idn": 0
+			},
+			"inputs": ["copy1"]
+		},
+		"attribPromote1": {
+			"type": "attribPromote",
+			"params": {
+				"classFrom": 1,
+				"classTo": 0,
+				"name": "id"
+			},
+			"inputs": ["attribId2"]
+		},
+		"merge3": {
+			"type": "merge",
+			"params": {
+				"compact": 1
+			},
+			"inputs": ["attribPromote1"]
+		},
+		"circle1": {
+			"type": "circle",
+			"params": {
+				"radius": 0.016,
+				"segments": 43,
+				"open": 0,
+				"direction": [0, 0, 1]
+			}
+		},
+		"instance1": {
+			"type": "instance",
+			"params": {
+				"material": "../MAT/meshLambertBuilder_INSTANCES"
+			},
+			"inputs": ["circle1", "transform3"]
+		},
+		"null1": {
+			"type": "null",
+			"inputs": ["instance1"]
+		},
+		"transform3": {
+			"type": "transform",
+			"params": {
+				"scale": 1.008
+			},
+			"inputs": ["scatter1"]
+		},
+		"material4": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/meshBasicBuilder_DISKS"
+			},
+			"inputs": ["null1"]
+		},
+		"attribNormalize1": {
+			"type": "attribNormalize",
+			"params": {
+				"mode": 1
+			},
+			"inputs": ["attribCreate2"]
+		},
+		"delete_keep_2_pts": {
+			"type": "delete",
+			"params": {
+				"invert": 1,
+				"byExpression": 1,
+				"expression": "@ptnum==copy('../copy1',0,'i') || @ptnum==( copy('../copy1',0,'i')+1 )"
+			},
+			"inputs": ["scatter1"]
+		},
+		"delete_keep_pt0": {
+			"type": "delete",
+			"params": {
+				"invert": 1,
+				"byExpression": 1
+			},
+			"inputs": ["delete_keep_2_pts"]
+		},
+		"delete_keep_pt1": {
+			"type": "delete",
+			"params": {
+				"byExpression": true
+			},
+			"inputs": ["delete_keep_2_pts"]
+		},
+		"attribCreate1": {
+			"type": "attribCreate",
+			"params": {
+				"name": "pointsDelta",
+				"size": 3,
+				"value3": [
+					"@P.x - point('../delete_keep_pt1','P',0).x",
+					"@P.y - point('../delete_keep_pt1','P',0).y",
+					"@P.z - point('../delete_keep_pt1','P',0).z"
+				]
+			},
+			"inputs": ["blend1"]
+		},
+		"attribCreate2": {
+			"type": "attribCreate",
+			"params": {
+				"name": "pointsDistance",
+				"value1": "sqrt(@pointsDelta.x * @pointsDelta.x + @pointsDelta.y * @pointsDelta.y + @pointsDelta.z * @pointsDelta.z)"
+			},
+			"inputs": ["attribCreate1"]
+		},
+		"attribId3": {
+			"type": "attribId",
+			"params": {
+				"idn": false
+			},
+			"inputs": ["delete1"]
+		}
+	},
+	"params": {
+		"r": [0, "$T*5", 0]
+	},
+	"flags": {
+		"display": true
+	}
+}

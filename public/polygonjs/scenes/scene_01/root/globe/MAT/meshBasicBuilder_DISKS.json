@@ -1,0 +1,383 @@
+{
+	"type": "meshBasicBuilder",
+	"nodes": {
+		"globals1": {
+			"type": "globals"
+		},
+		"output1": {
+			"type": "output",
+			"inputs": [
+				{
+					"index": 0,
+					"node": "instanceTransform1",
+					"output": "position"
+				},
+				{
+					"index": 1,
+					"node": "instanceTransform1",
+					"output": "normal"
+				},
+				{
+					"index": 2,
+					"node": "constant1",
+					"output": "val"
+				},
+				{
+					"index": 3,
+					"node": "max1",
+					"output": "val"
+				}
+			]
+		},
+		"disk1": {
+			"type": "disk",
+			"params": {
+				"position": {
+					"overriden_options": {}
+				},
+				"center": {
+					"raw_input": [0.5, 0.5],
+					"overriden_options": {}
+				},
+				"radius": {
+					"raw_input": 0.55,
+					"overriden_options": {}
+				},
+				"feather": {
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals1",
+					"output": "uv"
+				}
+			]
+		},
+		"disk2": {
+			"type": "disk",
+			"params": {
+				"position": {
+					"overriden_options": {}
+				},
+				"center": {
+					"raw_input": [0.5, 0.5],
+					"overriden_options": {}
+				},
+				"radius": {
+					"raw_input": 0.41,
+					"overriden_options": {}
+				},
+				"feather": {
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals1",
+					"output": "uv"
+				}
+			]
+		},
+		"subtract1": {
+			"type": "subtract",
+			"params": {
+				"sub0": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"sub1": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"sub2": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"maxInputsCount": 3,
+			"inputs": [
+				{
+					"index": 0,
+					"node": "disk1",
+					"output": "float"
+				},
+				{
+					"index": 1,
+					"node": "disk2",
+					"output": "float"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "sub0",
+						"type": "float"
+					},
+					{
+						"name": "sub1",
+						"type": "float"
+					},
+					{
+						"name": "sub2",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "subtract",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"instanceTransform1": {
+			"type": "instanceTransform"
+		},
+		"constant1": {
+			"type": "constant",
+			"params": {
+				"type": 4,
+				"color": [0.33725490196078434, 0.06274509803921569, 0.06274509803921569],
+				"asColor": 1
+			},
+			"connection_points": {
+				"in": [],
+				"out": [
+					{
+						"name": "val",
+						"type": "vec3"
+					}
+				]
+			}
+		},
+		"disk3": {
+			"type": "disk",
+			"params": {
+				"position": {
+					"overriden_options": {}
+				},
+				"center": {
+					"raw_input": [0.5, 0.5],
+					"overriden_options": {}
+				},
+				"radius": {
+					"raw_input": 0.21,
+					"overriden_options": {}
+				},
+				"feather": {
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals1",
+					"output": "uv"
+				}
+			]
+		},
+		"max1": {
+			"type": "max",
+			"params": {
+				"in0": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					},
+					"overriden_options": {}
+				},
+				"in1": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					},
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "subtract1",
+					"output": "subtract"
+				},
+				{
+					"index": 1,
+					"node": "disk3",
+					"output": "float"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "in0",
+						"type": "float"
+					},
+					{
+						"name": "in1",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		}
+	},
+	"params": {
+		"alphaTest": 0.09
+	},
+	"persisted_config": {
+		"material": {
+			"metadata": {
+				"version": 4.5,
+				"type": "Material",
+				"generator": "Material.toJSON"
+			},
+			"uuid": "/globe/MAT/meshBasicBuilder_DISKS-main",
+			"type": "MeshBasicMaterial",
+			"name": "/globe/MAT/meshBasicBuilder_DISKS",
+			"color": 16777215,
+			"reflectivity": 1,
+			"refractionRatio": 0.98,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"alphaTest": 0.09,
+			"fog": false
+		},
+		"onBeforeCompileDataJSONWithoutShaders": {
+			"paramConfigs": [],
+			"timeDependent": false,
+			"resolutionDependent": false,
+			"raymarchingLightsWorldCoordsDependent": false
+		},
+		"customMaterials": {
+			"customDepthMaterial": {
+				"material": {
+					"metadata": {
+						"version": 4.5,
+						"type": "Material",
+						"generator": "Material.toJSON"
+					},
+					"uuid": "/globe/MAT/meshBasicBuilder_DISKS-customDepthMaterial",
+					"type": "MeshDepthMaterial",
+					"name": "customDepthMaterial",
+					"depthFunc": 3,
+					"depthTest": true,
+					"depthWrite": true,
+					"colorWrite": true,
+					"stencilWrite": false,
+					"stencilWriteMask": 255,
+					"stencilFunc": 519,
+					"stencilRef": 0,
+					"stencilFuncMask": 255,
+					"stencilFail": 7680,
+					"stencilZFail": 7680,
+					"stencilZPass": 7680,
+					"alphaTest": 0.09,
+					"depthPacking": 3201
+				},
+				"onBeforeCompileDataJSONWithoutShaders": {
+					"paramConfigs": [],
+					"timeDependent": false,
+					"resolutionDependent": false,
+					"raymarchingLightsWorldCoordsDependent": false
+				}
+			},
+			"customDistanceMaterial": {
+				"material": {
+					"metadata": {
+						"version": 4.5,
+						"type": "Material",
+						"generator": "Material.toJSON"
+					},
+					"uuid": "/globe/MAT/meshBasicBuilder_DISKS-customDistanceMaterial",
+					"type": "MeshDistanceMaterial",
+					"name": "customDistanceMaterial",
+					"depthFunc": 3,
+					"depthTest": true,
+					"depthWrite": true,
+					"colorWrite": true,
+					"stencilWrite": false,
+					"stencilWriteMask": 255,
+					"stencilFunc": 519,
+					"stencilRef": 0,
+					"stencilFuncMask": 255,
+					"stencilFail": 7680,
+					"stencilZFail": 7680,
+					"stencilZPass": 7680,
+					"alphaTest": 0.09
+				},
+				"onBeforeCompileDataJSONWithoutShaders": {
+					"paramConfigs": [],
+					"timeDependent": false,
+					"resolutionDependent": false,
+					"raymarchingLightsWorldCoordsDependent": false
+				}
+			},
+			"customDepthDOFMaterial": {
+				"material": {
+					"metadata": {
+						"version": 4.5,
+						"type": "Material",
+						"generator": "Material.toJSON"
+					},
+					"uuid": "/globe/MAT/meshBasicBuilder_DISKS-customDepthDOFMaterial",
+					"type": "MeshDepthMaterial",
+					"name": "customDepthDOFMaterial",
+					"depthFunc": 3,
+					"depthTest": true,
+					"depthWrite": true,
+					"colorWrite": true,
+					"stencilWrite": false,
+					"stencilWriteMask": 255,
+					"stencilFunc": 519,
+					"stencilRef": 0,
+					"stencilFuncMask": 255,
+					"stencilFail": 7680,
+					"stencilZFail": 7680,
+					"stencilZPass": 7680,
+					"alphaTest": 0.09,
+					"depthPacking": 3200
+				},
+				"onBeforeCompileDataJSONWithoutShaders": {
+					"paramConfigs": [],
+					"timeDependent": false,
+					"resolutionDependent": false,
+					"raymarchingLightsWorldCoordsDependent": false
+				}
+			}
+		}
+	}
+}

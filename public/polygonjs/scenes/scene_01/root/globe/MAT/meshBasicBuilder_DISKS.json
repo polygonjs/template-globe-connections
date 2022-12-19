@@ -200,8 +200,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"in1": {
 					"type": "float",
@@ -209,8 +208,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [

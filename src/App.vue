@@ -1,29 +1,29 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Scene01 from "./polygonjs/components/Scene01.vue";
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <Scene01 msg="Vite + Vue" />
+  <div class="title-container">
+    <div class="title">We are connected</div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.title-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  display: block;
+  pointer-events: none;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.title-container .title {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  margin-left: 4rem;
+  font-size: 3rem;
+  color: #ccc;
 }
 </style>

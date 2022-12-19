@@ -74,7 +74,6 @@
 			"params": {
 				"name": "id"
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -169,8 +168,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"blend": {
 					"type": "float",
@@ -178,8 +176,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -231,8 +228,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [

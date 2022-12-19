@@ -2,7 +2,6 @@
 	"nodes": {
 		"globe": {
 			"pos": [-50, -50],
-			"selection": ["material2"],
 			"nodes": {
 				"attribFromTexture1": {
 					"pos": [-200, 400]
@@ -45,6 +44,54 @@
 				},
 				"circle3Points1": {
 					"pos": [500, 1600]
+				},
+				"material1": {
+					"pos": [500, 2500]
+				},
+				"attribId1": {
+					"pos": [500, 1700]
+				},
+				"attribId2": {
+					"pos": [500, 2000]
+				},
+				"attribPromote1": {
+					"pos": [500, 2200]
+				},
+				"merge3": {
+					"pos": [500, 2400]
+				},
+				"circle1": {
+					"pos": [950, 800]
+				},
+				"instance1": {
+					"pos": [1050, 950]
+				},
+				"null1": {
+					"pos": [1050, 2500]
+				},
+				"transform3": {
+					"pos": [1100, 750]
+				},
+				"attribNormalize1": {
+					"pos": [350, 1200]
+				},
+				"delete_keep_2_pts": {
+					"pos": [450, 500]
+				},
+				"delete_keep_pt0": {
+					"pos": [350, 650]
+				},
+				"delete_keep_pt1": {
+					"pos": [552.4096385542168, 652.4096385542168]
+				},
+				"attribCreate1": {
+					"pos": [350, 900]
+				},
+				"attribCreate2": {
+					"pos": [350, 1050]
+				},
+				"attribId3": {
+					"pos": [-200, 700]
 				},
 				"MAT": {
 					"pos": [-550, 100],
@@ -249,57 +296,6 @@
 							"pos": [-200, 50]
 						}
 					}
-				},
-				"material1": {
-					"pos": [500, 2500]
-				},
-				"attribId1": {
-					"pos": [500, 1700]
-				},
-				"attribId2": {
-					"pos": [500, 2000]
-				},
-				"attribPromote1": {
-					"pos": [500, 2200]
-				},
-				"merge3": {
-					"pos": [500, 2400]
-				},
-				"circle1": {
-					"pos": [950, 800]
-				},
-				"instance1": {
-					"pos": [1050, 950]
-				},
-				"null1": {
-					"pos": [1050, 2500]
-				},
-				"transform3": {
-					"pos": [1100, 750]
-				},
-				"material4": {
-					"pos": [1050, 2600]
-				},
-				"attribNormalize1": {
-					"pos": [350, 1200]
-				},
-				"delete_keep_2_pts": {
-					"pos": [450, 500]
-				},
-				"delete_keep_pt0": {
-					"pos": [350, 650]
-				},
-				"delete_keep_pt1": {
-					"pos": [552.4096385542168, 652.4096385542168]
-				},
-				"attribCreate1": {
-					"pos": [350, 900]
-				},
-				"attribCreate2": {
-					"pos": [350, 1050]
-				},
-				"attribId3": {
-					"pos": [-200, 700]
 				}
 			}
 		},

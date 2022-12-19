@@ -25,7 +25,6 @@
 			"params": {
 				"name": "id"
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -41,7 +40,6 @@
 			"params": {
 				"name": "idn"
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -95,8 +93,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -169,8 +166,7 @@
 						"spare": true,
 						"editable": false
 					},
-					"raw_input": 0.44,
-					"overriden_options": {}
+					"raw_input": 0.44
 				},
 				"edge1": {
 					"type": "float",
@@ -179,8 +175,7 @@
 						"spare": true,
 						"editable": false
 					},
-					"raw_input": 0.52,
-					"overriden_options": {}
+					"raw_input": 0.52
 				},
 				"x": {
 					"type": "float",
@@ -189,8 +184,7 @@
 						"spare": true,
 						"editable": false
 					},
-					"raw_input": 0.03,
-					"overriden_options": {}
+					"raw_input": 0.03
 				}
 			},
 			"inputs": [
@@ -242,8 +236,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"preAdd": {
 					"type": "float",
@@ -251,8 +244,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"mult": {
 					"type": "float",
@@ -320,8 +312,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"preAdd": {
 					"type": "float",
@@ -605,8 +596,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"in1": {
 					"type": "float",
@@ -614,8 +604,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -658,8 +647,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -693,8 +681,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"min": {
 					"type": "float",
@@ -702,8 +689,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"max": {
 					"type": "float",
@@ -711,8 +697,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -760,7 +745,6 @@
 			"params": {
 				"float": 2
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -780,8 +764,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -811,7 +794,6 @@
 			"params": {
 				"name": "id"
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -899,8 +881,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"center": {
 					"type": "float",

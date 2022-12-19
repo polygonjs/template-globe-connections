@@ -43,7 +43,7 @@
 		},
 		"merge1": {
 			"type": "merge",
-			"inputs": ["material2", "material3", "material1", "material4"],
+			"inputs": ["material2", "material3", "material1", "null1"],
 			"flags": {
 				"display": true
 			}
@@ -144,7 +144,7 @@
 		"instance1": {
 			"type": "instance",
 			"params": {
-				"material": "../MAT/meshLambertBuilder_INSTANCES"
+				"material": "../MAT/meshBasicBuilder_DISKS"
 			},
 			"inputs": ["circle1", "transform3"]
 		},
@@ -158,13 +158,6 @@
 				"scale": 1.008
 			},
 			"inputs": ["scatter1"]
-		},
-		"material4": {
-			"type": "material",
-			"params": {
-				"material": "../MAT/meshBasicBuilder_DISKS"
-			},
-			"inputs": ["null1"]
 		},
 		"attribNormalize1": {
 			"type": "attribNormalize",

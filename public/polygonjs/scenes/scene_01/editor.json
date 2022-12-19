@@ -16,7 +16,7 @@
 				"panelTypes": ["params", "spreadsheet"],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"active_folder": 585,
+					"active_folder": null,
 					"linkIndex": 1
 				}
 			},
@@ -28,10 +28,10 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": -41.97080291970802,
-						"y": -293.6131386861314
+						"x": -1176.4774653341956,
+						"y": -2390.700856593542
 					},
-					"zoom": 0.6070000000000001
+					"zoom": 0.493
 				},
 				"history": {
 					"2": {
@@ -40,6 +40,13 @@
 							"y": 1.2515644555694614
 						},
 						"zoom": 0.7990000000000003
+					},
+					"34": {
+						"position": {
+							"x": -1176.4774653341956,
+							"y": -2390.700856593542
+						},
+						"zoom": 0.493
 					},
 					"60": {
 						"position": {
@@ -118,6 +125,13 @@
 						},
 						"zoom": 1.339
 					},
+					"659": {
+						"position": {
+							"x": -41.97080291970802,
+							"y": -293.6131386861314
+						},
+						"zoom": 0.6070000000000001
+					},
 					"742": {
 						"position": {
 							"x": -89.61593172119485,
@@ -159,11 +173,10 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/globe/MAT", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/globe", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/globe/MAT/meshBasicBuilder_DISKS",
 				"/globe/MAT",
 				"/globe/MAT/meshBasicBuilder_DISKS",
 				"/globe/MAT",
@@ -182,7 +195,8 @@
 				"/globe",
 				"/globe/MAT",
 				"/globe/MAT/pointsBuilder_DOTS",
-				"/globe/MAT"
+				"/globe/MAT",
+				"/globe"
 			],
 			"2": [],
 			"3": [],

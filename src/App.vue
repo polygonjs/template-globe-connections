@@ -3,7 +3,7 @@ import Scene01 from "./polygonjs/components/Scene01.vue";
 </script>
 
 <template>
-  <Scene01 msg="Vite + Vue" />
+  <Scene01 />
   <div class="title-container">
     <div class="title">We are connected</div>
   </div>
@@ -17,6 +17,7 @@ import Scene01 from "./polygonjs/components/Scene01.vue";
   height: 100%;
   display: block;
   pointer-events: none;
+  z-index: 99;
 }
 .title-container .title {
   position: absolute;

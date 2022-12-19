@@ -8,7 +8,7 @@
     "build": "vue-tsc && vite build && yarn clean_dist",
     "preview": "vite preview",
     "polygon": "polygonjs-editor",
-    "clean_dist": "rm -rf dist/polygonjs/backup && rm -rf dist/polygonjs/js && rm -rf dist/screenshots"
+    "clean_dist": "rm -rf dist/polygonjs/backup && rm -rf dist/polygonjs/js && rm -rf dist/polygonjs/build && rm -rf dist/screenshots && rm -rf dist/polygonjs/screenshots/scenes/scene_01/poster.webm"
   },
   "dependencies": {
     "@polygonjs/vue3": "^1.2.67-2",
